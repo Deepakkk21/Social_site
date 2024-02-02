@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Feed</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body class="container mt-3">
+
+    <a href="/posts/create/<%= userId %>" class="btn btn-primary">Go to create post</a>
+    <a href="/user/profile/<%= userId %>" class="btn btn-info">Go to profile</a>
+    <h2 style="margin-top: 20px; font-size: 24px;">Posts feed</h2>
+
+    <% if (posts.length === 0) { %>
+        <p>No posts available.</p>
+    <% } else { %>
+        <ul class="list-group">
+            <% posts.forEach((post) => { %>
+                <li class="list-group-item" style="background-color: #ffffff; border: 1px solid #dee2e6; border-radius: 10px; margin-bottom: 15px; padding: 15px;">
+                    <p style="font-size: 18px; margin-bottom: 10px;"><strong>Content:</strong> <%= post.content %></p>
+                    <p style="color: #6c757d;"><strong>Location:</strong> <%= post.location %></p>
+                    <p style="color: #6c757d;"><strong>Author:</strong> <%= post.author %></p>
+                </li>
+            <% }); %>
+        </ul>
+    <% } %>
+
+    <a href="/auth/logout" class="btn btn-danger" style="margin-top: 20px;">Logout</a>
+
+</body>
+</html>
