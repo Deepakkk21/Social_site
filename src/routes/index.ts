@@ -7,7 +7,7 @@ import { authenticateToken } from '../middleware/authentication';
 const router = express.Router();
 
 //auth routes
-router.get('/signup',authController.signupPage)
+// router.get('/signup',authController.signupPage)
 router.post('/signup', authController.signup);
 router.get('/login',  authController.loginPage);
 router.post('/login', authController.login);

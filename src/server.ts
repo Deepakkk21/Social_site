@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import session from 'express-session';
 import cookieParser from 'cookie-parser';
 import flash from 'connect-flash';
+import { Request, Response } from 'express';
 import authRoutes from './routes/index';
 import profileRoutes from './routes/index';
 import postRoutes from './routes/index';
@@ -31,6 +32,10 @@ app.use(flash());
 app.set('view engine', 'ejs');
 app.set('views', './views');
 app.use(express.static(__dirname + '/assets'));
+
+app.get('/',(req: Request, res: Response)=>{
+  return res.render("signup", { messages: req.flash() });
+});
 
 // Routes
 

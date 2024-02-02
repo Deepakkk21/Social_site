@@ -6,9 +6,9 @@ import User from '../models/User';
 
 // signup controller
 
-export const signupPage = function(req: Request, res: Response){
-    return res.render("signup", { messages: req.flash() });
-}
+// export const signupPage = function(req: Request, res: Response){
+//     return res.render("signup", { messages: req.flash() });
+// }
 
 export const signup = async (req: Request, res: Response) => {
   try {
@@ -77,7 +77,7 @@ export const login = async (req: Request, res: Response) => {
         } else {
             // Alert the user that the email doesn't exist, please Signup
             req.flash('error', "Email doesn't exist");
-            return res.redirect('/auth/signup'); // Redirect to the login page
+            return res.redirect('/'); // Redirect to the login page
         }
     } catch (error) {
         console.error(error);
