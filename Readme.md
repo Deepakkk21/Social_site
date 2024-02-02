@@ -6,27 +6,27 @@ This project is a simple social site web application developed using TypeScript,
 
 /social-site
 ├── /src
-│   ├── /controllers
-│   │   ├── authController.ts
-│   │   ├── profileController.ts
-│   │   └── postController.ts
-│   ├── /database
-│   │   └── mongoose.ts
-│   ├── /middleware
-│   │   └── authentication.ts
-│   ├── /models
-│   │   ├── User.ts
-│   │   └── Post.ts
-│   ├── /routes
-│   │   └── index.ts
-│   ├── /views
-│   │   ├── signup.ejs
-│   │   ├── login.ejs
-│   │   ├── profile.ejs
-│   │   ├── posts.ejs
-│   │   ├── update.ejs
-│   │   └── feed.ejs
-│   └── server.ts
+│ ├── /controllers
+│ │ ├── authController.ts
+│ │ ├── profileController.ts
+│ │ └── postController.ts
+│ ├── /database
+│ │ └── mongoose.ts
+│ ├── /middleware
+│ │ └── authentication.ts
+│ ├── /models
+│ │ ├── User.ts
+│ │ └── Post.ts
+│ ├── /routes
+│ │ └── index.ts
+│ ├── /views
+│ │ ├── signup.ejs
+│ │ ├── login.ejs
+│ │ ├── profile.ejs
+│ │ ├── posts.ejs
+│ │ ├── update.ejs
+│ │ └── feed.ejs
+│ └── server.ts
 ├── package.json
 ├── tsconfig.json
 └── README.md
