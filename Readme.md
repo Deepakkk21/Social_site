@@ -46,7 +46,7 @@ This project is a simple social site web application developed using TypeScript,
 1. Clone the repository.
 2. Make sure MongoDB is installed and running. Update the MongoDB connection string in `/src/database/mongoose.ts`.
 3. Run `npm install`.
-4. Run `npm start`.
+4. Run `nodemon server.ts`.
 
 ## Features
 
