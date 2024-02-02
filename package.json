@@ -2,7 +2,7 @@
   "name": "wasserstock",
   "version": "1.0.0",
   "description": "",
-  "main": "server",
+  "main": "server.ts",
   
   "scripts": {
     "start": "nodemon server.ts",
