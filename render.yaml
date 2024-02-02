@@ -1,5 +1,5 @@
 services:
   - type: web
-    name: my-app
+    name: social
     buildCommand: npm install && npm run build
     startCommand: npm start
