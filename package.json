@@ -2,10 +2,9 @@
   "name": "social",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "src/server.ts",
   "scripts": {
     "dev": "nodemon",
-    "start": " node public/server.js",
     "build": " tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
