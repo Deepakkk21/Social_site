@@ -4,7 +4,7 @@
   "description": "Social Site Project",
   "main": "dist/server.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && copyfiles -u 1 --flat src/views/**/*.* dist/views && echo 'Views copied'",
     "start": "node dist/server.js",
     "dev": "nodemon src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
