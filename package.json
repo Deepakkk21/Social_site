@@ -4,7 +4,7 @@
   "description": "Social Site Project",
   "main": "dist/server.js",
   "scripts": {
-    "build": "tsc && copyfiles -u 1 --flat src/views/**/*.* dist/views && echo 'Views copied'",
+    "build": "tsc && node scripts/copy-views.js && echo 'Views copied'",
     "start": "node dist/server.js",
     "dev": "nodemon src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -39,6 +39,7 @@
     "@types/nodemon": "^1.19.6",
     "@types/passport": "^1.0.16",
     "copyfiles": "^2.4.1",
+    "shelljs": "^0.8.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   }
