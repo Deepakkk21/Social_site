@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.logout = exports.login = exports.loginPage = exports.signup = void 0;
-const bcrypt_1 = __importDefault(require("bcrypt"));
+const bcryptjs_1 = __importDefault(require("bcryptjs"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const User_1 = __importDefault(require("../models/User"));
 // signup controller
@@ -24,7 +24,7 @@ const signup = async (req, res) => {
             req.flash('error', 'Email or username already exists , please signup');
             return res.redirect('/auth/login');
         }
-        const hashedPassword = await bcrypt_1.default.hash(password, 10);
+        const hashedPassword = await bcryptjs_1.default.hash(password, 10);
         const newUser = new User_1.default({
             email,
             username,
@@ -51,7 +51,7 @@ const login = async (req, res) => {
         const user = await User_1.default.findOne({ email });
         if (user) {
             // Check if the password matches
-            const passwordMatch = await bcrypt_1.default.compare(password, user.password);
+            const passwordMatch = await bcryptjs_1.default.compare(password, user.password);
             if (passwordMatch) {
                 // Create a JWT token
                 const token = jsonwebtoken_1.default.sign({ userId: user._id, email: user.email }, 'Deep@k2110', { expiresIn: '1h' });
