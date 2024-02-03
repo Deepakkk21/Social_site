@@ -2,7 +2,11 @@
 
 This project is a simple social site web application developed using TypeScript, Node.js, Express, and MongoDB with Mongoose.
 
-## Project Structure
+## Deployed link : 
+
+Link : https://social-site-t57u.onrender.com
+
+## Project Structure : 
 
 ```plaintext
 /social-site
@@ -48,7 +52,8 @@ This project is a simple social site web application developed using TypeScript,
 1. Clone the repository.
 2. Make sure MongoDB is installed and running. Update the MongoDB connection string in `/src/database/mongoose.ts`.
 3. Run `npm install`.
-4. Run `nodemon server.ts`.
+4. Run `npm run build`
+5. Run `npm start`.
 
 ## Features
 
