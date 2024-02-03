@@ -27,13 +27,15 @@ This project is a simple social site web application developed using TypeScript,
 │   │   ├── posts.ejs
 │   │   ├── update.ejs
 │   │   └── feed.ejs
-│   └── server.ts
+│   ├── /scripts
+│   │   └── copy-views.js
+│   └── /dist
+├── /node_modules
 ├── package.json
 ├── tsconfig.json
 └── README.md
+
 ```
-
-
 
 ## Prerequisites
 

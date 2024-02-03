@@ -1,4 +1,3 @@
-// scripts/copy-views.js
 const shell = require('shelljs');
 
 // Remove existing dist/views directory
